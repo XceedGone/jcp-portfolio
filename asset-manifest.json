@@ -1,22 +1,28 @@
 {
   "files": {
-    "main.css": "/jcp-portfolio/static/css/main.facdcb93.css",
-    "main.js": "/jcp-portfolio/static/js/main.81c9c27e.js",
+    "main.css": "/jcp-portfolio/static/css/main.175a28dc.css",
+    "main.js": "/jcp-portfolio/static/js/main.8baf5b59.js",
     "static/js/787.2558ba3c.chunk.js": "/jcp-portfolio/static/js/787.2558ba3c.chunk.js",
-    "static/media/banner-bg.png": "/jcp-portfolio/static/media/banner-bg.cc1273af450504afe755.png",
-    "static/media/header-img.svg": "/jcp-portfolio/static/media/header-img.84bf93eb20488a753440bf83d27db7bb.svg",
+    "static/media/banner-bg.png": "/jcp-portfolio/static/media/banner-bg.4d12a82563a04eb6993d.png",
+    "static/media/web-dev.png": "/jcp-portfolio/static/media/web-dev.15967bb7321627484d02.png",
     "static/media/CentraNo2-Bold.ttf": "/jcp-portfolio/static/media/CentraNo2-Bold.2faff7f7d3fc92a2fcd9.ttf",
     "static/media/CentraNo2-Medium.ttf": "/jcp-portfolio/static/media/CentraNo2-Medium.f94be5b326d78bb32b95.ttf",
     "static/media/CentraNo2-Book.ttf": "/jcp-portfolio/static/media/CentraNo2-Book.2b143fa4b734a3584043.ttf",
+    "static/media/laravel.png": "/jcp-portfolio/static/media/laravel.23b4d5613d43b04532ea.png",
     "static/media/footer-bg.png": "/jcp-portfolio/static/media/footer-bg.7bd67c0f73571d0acc02.png",
-    "static/media/logo.svg": "/jcp-portfolio/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/php.png": "/jcp-portfolio/static/media/php.a5cb06a2eaadc2c2d677.png",
+    "static/media/c.png": "/jcp-portfolio/static/media/c.a4346452812031bd6ea6.png",
+    "static/media/jcp-img.png": "/jcp-portfolio/static/media/jcp-img.e6441abf0df099c69b8a.png",
+    "static/media/revicons.eot": "/jcp-portfolio/static/media/revicons.a77de540a38981833f9e.eot",
+    "static/media/revicons.ttf": "/jcp-portfolio/static/media/revicons.57fd05d4ae650374c8de.ttf",
+    "static/media/revicons.woff": "/jcp-portfolio/static/media/revicons.e8746a624ed098489406.woff",
     "index.html": "/jcp-portfolio/index.html",
-    "main.facdcb93.css.map": "/jcp-portfolio/static/css/main.facdcb93.css.map",
-    "main.81c9c27e.js.map": "/jcp-portfolio/static/js/main.81c9c27e.js.map",
+    "main.175a28dc.css.map": "/jcp-portfolio/static/css/main.175a28dc.css.map",
+    "main.8baf5b59.js.map": "/jcp-portfolio/static/js/main.8baf5b59.js.map",
     "787.2558ba3c.chunk.js.map": "/jcp-portfolio/static/js/787.2558ba3c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.facdcb93.css",
-    "static/js/main.81c9c27e.js"
+    "static/css/main.175a28dc.css",
+    "static/js/main.8baf5b59.js"
   ]
 }
