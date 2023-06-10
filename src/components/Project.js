@@ -1,11 +1,36 @@
+import { Card } from "./Card";
 import Carousel from "react-multi-carousel";
 import { useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "react-multi-carousel/lib/styles.css";
+import Sample_1 from "../assets/img/project/sample-1.png";
 
 export const Project = () => {
+  const projects = [
+    {
+      title: "Laravel",
+      description: "Backend",
+      imgUrl: Sample_1,
+    },
+    {
+      title: "Php",
+      description: "Backend",
+      imgUrl: Sample_1,
+    },
+    {
+      title: "Php",
+      description: "Backend",
+      imgUrl: Sample_1,
+    },
+    {
+      title: "Php",
+      description: "Backend",
+      imgUrl: Sample_1,
+    },
+  ];
+
   useEffect(() => {
     AOS.init({ duration: 2000 });
   }, []);
@@ -54,10 +79,13 @@ export const Project = () => {
                 infinite={true}
                 className="skill-slider"
               >
-                <div className="item">
-                  <img src={""} alt="unity" />
-                  <h5>Sample</h5>
-                </div>
+                {projects.map((project, index) => {
+                  return (
+                    <div className="project-item" key={index}>
+                      <Card {...project} />
+                    </div>
+                  );
+                })}
               </Carousel>
             </div>
           </Col>

@@ -383,6 +383,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   text-align: center;
   width: 56%;
 }
+.skill-slider .project-item img {
+  width: 100%;
+  margin: 10px 10px 10px 10px;
+}
+.proj-card h6 {
+  color: white;
+}
 .project .nav.nav-pills {
   width: 72%;
   margin: 0 auto;
