@@ -82,10 +82,6 @@ p.danger {
 	color: red;
 }
 /************ Navbar Css ************/
-.navbar {
-  background-color: #DDE6ED;
-  height: 90px;
-}
 nav.navbar {
   padding: 18px 0;
   position: fixed;
@@ -95,7 +91,7 @@ nav.navbar {
   transition:  0.32s ease-in-out;
 }
 nav.navbar.scrolled {
-  padding: 0px 0;
+  padding: 1px 0px 1px 0px;
   background-color: #DDE6ED;
 }
 nav.navbar a.navbar-brand {
@@ -244,7 +240,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /************ Banner Css ************/
 .banner {
   margin-top: 0;
-  padding:120px 0 50px 0;
+  padding:150px 0 50px 0;
   background-image: url('./assets/img/banner-bg.png');
   background-position: top center;
   background-size: cover;
@@ -294,8 +290,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 /* .banner img {
   animation: updown 3s linear infinite;
-} */
-/* @keyframes updown {
+}
+@keyframes updown {
     0% {
         transform: translateY(-20px);
     }
@@ -312,7 +308,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Skills Css ************/
 .skill {
-  padding: 0 0 50px 0;
+  padding: 50px 0 50px 0;
   position: relative;
 }
 .skill-bx {
@@ -451,7 +447,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .proj-imgbx::before {
   content: "";
-  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  background: linear-gradient(90.21deg, #DDE6ED -5.91%, #27374D 111.58%);
   opacity: 0.85;
   position: absolute;
   width: 100%;
