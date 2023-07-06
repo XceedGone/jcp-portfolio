@@ -1,31 +1,17 @@
 import { Navbar, Container, Nav } from "react-bootstrap";
 import { useState, useEffect } from "react";
 import logo from "../assets/img/jcp logo.png";
+import my_resume from "../assets/files/Pesquera_Resume.pdf";
 
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
-  const [scrolled, seScrolled] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => {
-      if (window.scrollY > 50) {
-        seScrolled(true);
-      } else {
-        seScrolled(false);
-      }
-    };
-
-    window.addEventListener("scroll", onScroll);
-
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   const onUpdateActiveLink = (value) => {
     setActiveLink(value);
   };
 
   return (
-    <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
+    <Navbar expand="lg" className="scrolled">
       <Container>
         <Navbar.Brand href="#home">
           <img src={logo} width="155" height="41" alt="Logo" />
@@ -65,8 +51,11 @@ export const NavBar = () => {
             </Nav.Link>
           </Nav>
           <span className="navbar-text">
-            <button className="vvd" onClick={() => console.log("Connect")}>
-              <span>Let's Connect!</span>
+            <button
+              className="vvd"
+              onClick={() => window.open(my_resume, "_blank")}
+            >
+              <span>My Resume</span>
             </button>
           </span>
         </Navbar.Collapse>
