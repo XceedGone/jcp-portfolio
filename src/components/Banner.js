@@ -1,59 +1,59 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Container, Row, Col } from "react-bootstrap";
-import { ArrowRightCircle } from "react-bootstrap-icons";
+import {ArrowRightCircle, Link} from "react-bootstrap-icons";
 import header from "../assets/img/jcp-img.png";
 
 export const Banner = () => {
-  const [loopNum, setLoopNum] = useState(0);
-  const [isDeleting, setIsDeleting] = useState(false);
-  const toRotate = [
-    " Hello World",
-    " This is my portfolio",
-    " I'm a developer",
-  ];
-  const [text, setText] = useState("");
-  const [index, setIndex] = useState(1);
-  const [delta, setDelta] = useState(300 - Math.random() * 100);
-  const period = 1000;
+  const Typewriter = ({ toRotate, period }) => {
+    const [text, setText] = useState('');
+    const [loopNum, setLoopNum] = useState(0);
+    const [index, setIndex] = useState(0);
+    const [isDeleting, setIsDeleting] = useState(false);
+    const [delta, setDelta] = useState(500); // Initial delta value, can be adjusted
 
-  const tick = () => {
-    let i = loopNum % toRotate.length;
-    let fullText = toRotate[i];
-    let updatedText = isDeleting
-      ? fullText.substring(0, text.length - 1)
-      : fullText.substring(0, text.length + 1);
+    const tick = useCallback(() => {
+      const i = loopNum % toRotate.length;
+      const fullText = toRotate[i];
+      const updatedText = isDeleting
+          ? fullText.substring(0, text.length - 1)
+          : fullText.substring(0, text.length + 1);
 
-    setText(updatedText);
+      setText(updatedText);
 
-    if (isDeleting) {
-      setDelta((prevDelta) => prevDelta / 2);
-    }
+      if (isDeleting) {
+        setDelta((prevDelta) => prevDelta / 2);
+      }
 
-    if (!isDeleting && updatedText === fullText) {
-      setIsDeleting(true);
-      setIndex((prevIndex) => prevIndex - 1);
-      setDelta(period);
-    } else if (isDeleting && updatedText === "") {
-      setIsDeleting(false);
-      setLoopNum(loopNum + 1);
-      setIndex(1);
-      setDelta(500);
-    } else {
-      setIndex((prevIndex) => prevIndex + 1);
-    }
+      if (!isDeleting && updatedText === fullText) {
+        setIsDeleting(true);
+        setIndex((prevIndex) => prevIndex - 1);
+        setDelta(period);
+      } else if (isDeleting && updatedText === "") {
+        setIsDeleting(false);
+        setLoopNum(loopNum + 1);
+        setIndex(1);
+        setDelta(500); // Reset delta value after loop
+      } else {
+        setIndex((prevIndex) => prevIndex + 1);
+      }
+    }, [isDeleting, loopNum, period, text, toRotate]);
+
+    useEffect(() => {
+      const ticker = setInterval(() => {
+        tick();
+      }, delta);
+
+      return () => {
+        clearInterval(ticker);
+      };
+    }, [delta, tick]);
+
+    // Ensuring the effect runs only when delta or tick changes
+
+    return <span>{text}</span>;
   };
-
-  useEffect(() => {
-    let ticker = setInterval(() => {
-      tick();
-    }, delta);
-
-    return () => {
-      clearInterval(ticker);
-    };
-  }, [text]);
 
   useEffect(() => {
     AOS.init({ duration: 2000 });
@@ -68,7 +68,7 @@ export const Banner = () => {
             <h1>
               Hi I'm JC!
               <br></br>
-              <span>{text}</span>
+              <Typewriter toRotate={["Hello World", "This is my portfolio", "I'm a developer"]} period={1000} />
             </h1>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -76,11 +76,7 @@ export const Banner = () => {
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip ex ea commodo consequat.
             </p>
-            <button
-              onClick={() => {
-                console.log("connect");
-              }}
-            >
+            <button>
               Let's Connect! <ArrowRightCircle size={25} />
             </button>
           </Col>

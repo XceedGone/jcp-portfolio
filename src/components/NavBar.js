@@ -1,5 +1,5 @@
 import { Navbar, Container, Nav } from "react-bootstrap";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import logo from "../assets/img/jcp logo.png";
 import my_resume from "../assets/files/Pesquera_Resume.pdf";
 
@@ -14,7 +14,7 @@ export const NavBar = () => {
     <Navbar expand="lg" className="scrolled">
       <Container>
         <Navbar.Brand href="#home">
-          <img src={logo} width="155" height="41" alt="Logo" />
+          <img src={logo} alt="Logo" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav">
           <span className="navbar-toggler-icon"></span>

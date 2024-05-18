@@ -6,6 +6,11 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "react-multi-carousel/lib/styles.css";
 import Sample_1 from "../assets/img/project/sample-1.png";
+import Unity from "../assets/img/skills/unity.png";
+import CSharp from "../assets/img/skills/c.png";
+import WebDev from "../assets/img/skills/web-dev.png";
+import Laravel from "../assets/img/skills/laravel.png";
+import Php from "../assets/img/skills/php.png";
 
 export const Project = () => {
   const projects = [
@@ -75,17 +80,30 @@ export const Project = () => {
           <Col>
             <div className="skill-bx" data-aos="flip-right">
               <Carousel
-                responsive={responsive}
-                infinite={true}
-                className="skill-slider"
+                  responsive={responsive}
+                  infinite={true}
+                  className="skill-slider"
               >
-                {projects.map((project, index) => {
-                  return (
-                    <div className="project-item" key={index}>
-                      <Card {...project} />
-                    </div>
-                  );
-                })}
+                <div className="item">
+                  <img src={Unity} alt="unity" />
+                  <h5>Unity 3D</h5>
+                </div>
+                <div className="item">
+                  <img src={CSharp} alt="csharp" />
+                  <h5>C#</h5>
+                </div>
+                <div className="item">
+                  <img src={WebDev} alt="WebDev" />
+                  <h5>Html/Css/JavaScript</h5>
+                </div>
+                <div className="item">
+                  <img src={Laravel} alt="Laravel" />
+                  <h5>Laravel</h5>
+                </div>
+                <div className="item">
+                  <img src={Php} alt="Php" />
+                  <h5>Php</h5>
+                </div>
               </Carousel>
             </div>
           </Col>
