@@ -1,8 +1,8 @@
 import "aos/dist/aos.css";
 import "react-multi-carousel/lib/styles.css";
-import { Skills } from './Skills';
-import { Project } from './Project';
-import { About } from './About';
+import { Skills } from './menu/Skills';
+import { Project } from './menu/Project';
+import { About } from './menu/About';
 import "react-multi-carousel/lib/styles.css"
 import Carousel from "react-multi-carousel";
 

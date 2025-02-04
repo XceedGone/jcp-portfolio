@@ -1,7 +1,7 @@
 import "aos/dist/aos.css";
 import "react-multi-carousel/lib/styles.css";
-import logo from "../assets/img/jcp logo.png";
-import { IconCard } from "./Card";
+import logo from "../../../assets/img/jcp logo.png";
+import { IconCard } from "../../../components/Card";
 
 export const Footer = () => {
   return (
