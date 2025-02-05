@@ -6,36 +6,9 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "react-multi-carousel/lib/styles.css";
 import Sample_1 from "../../../assets/img/project/sample-1.png";
-import Unity from "../../../assets/img/skills/unity.png";
-import CSharp from "../../../assets/img/skills/c.png";
-import WebDev from "../../../assets/img/skills/web-dev.png";
-import Laravel from "../../../assets/img/skills/laravel.png";
-import Php from "../../../assets/img/skills/php.png";
+import { IconModalButton } from "../../../components/ComponentUtils";
 
 export const Project = () => {
-  const projects = [
-    {
-      title: "Laravel",
-      description: "Backend",
-      imgUrl: Sample_1,
-    },
-    {
-      title: "Php",
-      description: "Backend",
-      imgUrl: Sample_1,
-    },
-    {
-      title: "Php",
-      description: "Backend",
-      imgUrl: Sample_1,
-    },
-    {
-      title: "Php",
-      description: "Backend",
-      imgUrl: Sample_1,
-    },
-  ];
-
   useEffect(() => {
     AOS.init({ duration: 2000 });
   }, []);
@@ -60,54 +33,26 @@ export const Project = () => {
     },
   };
 
+  const myProjectsArray = [
+    { title: 'Sample 1', imageUrl: Sample_1, showDescription: true }
+  ]
   return (
     <section className="skill" id="projects">
       <Container>
         <Row>
           <Col>
-            <div className="skill-tx">
-              <h2>Projects</h2>
+            <div>
+              <h2>Project</h2>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
                 nisi ut aliquip ex ea commodo consequat.
               </p>
+              <IconModalButton btnTitle='Show my projects' modalTitle='List of Projects' mySkills={myProjectsArray}/>
             </div>
           </Col>
         </Row>
-        {/*<Row>*/}
-        {/*  <Col>*/}
-        {/*    <div className="skill-bx" data-aos="flip-right">*/}
-        {/*      <Carousel*/}
-        {/*          responsive={responsive}*/}
-        {/*          infinite={true}*/}
-        {/*          className="skill-slider"*/}
-        {/*      >*/}
-        {/*        <div className="item">*/}
-        {/*          <img src={Unity} alt="unity" />*/}
-        {/*          <h5>Unity 3D</h5>*/}
-        {/*        </div>*/}
-        {/*        <div className="item">*/}
-        {/*          <img src={CSharp} alt="csharp" />*/}
-        {/*          <h5>C#</h5>*/}
-        {/*        </div>*/}
-        {/*        <div className="item">*/}
-        {/*          <img src={WebDev} alt="WebDev" />*/}
-        {/*          <h5>Html/Css/JavaScript</h5>*/}
-        {/*        </div>*/}
-        {/*        <div className="item">*/}
-        {/*          <img src={Laravel} alt="Laravel" />*/}
-        {/*          <h5>Laravel</h5>*/}
-        {/*        </div>*/}
-        {/*        <div className="item">*/}
-        {/*          <img src={Php} alt="Php" />*/}
-        {/*          <h5>Php</h5>*/}
-        {/*        </div>*/}
-        {/*      </Carousel>*/}
-        {/*    </div>*/}
-        {/*  </Col>*/}
-        {/*</Row>*/}
       </Container>
     </section>
   );

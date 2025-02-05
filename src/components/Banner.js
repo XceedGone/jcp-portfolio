@@ -70,12 +70,12 @@ export const Banner = () => {
               <br></br>
               <Typewriter toRotate={["Hello World", "This is my portfolio", "I'm a developer"]} period={1000} />
             </h1>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </p>
+            <p className="text-justify">
+                My dedication to learning new things is a significant advantage in my professional life. This allows me to work effectively and collaboratively, while 
+                also enhancing my skills and knowledge in the IT industry. 
+                Having just a year of experience as a developer is not a hindrance to 
+                accomplishing client requirements. Instead, it motivates me to produce high-quality results. 
+              </p>
             <button>
               Let's Connect! <ArrowRightCircle size={25} />
             </button>

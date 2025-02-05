@@ -4,7 +4,12 @@ import { Container, Row, Col } from "react-bootstrap";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "react-multi-carousel/lib/styles.css";
-import { SimpleButton } from "../../../components/ComponentUtils"
+import { IconModalButton } from "../../../components/ComponentUtils";
+import Laravel from "../../../assets/img/skills/laravel.png";
+import C from "../../../assets/img/skills/c.png";
+import Php from "../../../assets/img/skills/php.png";
+import Unity from "../../../assets/img/skills/unity.png";
+import WebDev from "../../../assets/img/skills/web-dev.png";
 
 export const Skills = () => {
   useEffect(() => {
@@ -30,6 +35,13 @@ export const Skills = () => {
     },
   };
 
+  const mySkillsArray = [
+    { title: 'Php', imageUrl: Laravel },
+    { title: 'Laravel', imageUrl: Php },
+    { title: 'Html/CSS/JavaScript', imageUrl: WebDev },
+    { title: 'Unity', imageUrl: Unity },
+    { title: 'C#', imageUrl: C },
+  ]
   return (
     <section className="skill" id="skills">
       <Container>
@@ -42,12 +54,9 @@ export const Skills = () => {
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
                 nisi ut aliquip ex ea commodo consequat.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
               </p>
-              <SimpleButton/>
+              
+              <IconModalButton btnTitle='Show my skills' modalTitle='List of Skills' mySkills={mySkillsArray}/>
             </div>
           </Col>
         </Row>

@@ -14,19 +14,12 @@ export const About = () => {
       <Container>
         <Row>
           <Col>
-            <div className="skill-tx">
-              <h2>About me</h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
+            <div>
+              <h2 class="text-center">About me</h2>
+              <p className="text-justify">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
               </p>
             </div>
-          </Col>
-        </Row>
-        <Row>
-          <Col>
           </Col>
         </Row>
       </Container>
