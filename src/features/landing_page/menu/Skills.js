@@ -5,11 +5,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "react-multi-carousel/lib/styles.css";
 import { IconModalButton } from "../../../components/ComponentUtils";
-import Laravel from "../../../assets/img/skills/laravel.png";
-import C from "../../../assets/img/skills/c.png";
-import Php from "../../../assets/img/skills/php.png";
-import Unity from "../../../assets/img/skills/unity.png";
-import WebDev from "../../../assets/img/skills/web-dev.png";
+import { images } from "../../../utils/images";
 
 export const Skills = () => {
   useEffect(() => {
@@ -35,28 +31,34 @@ export const Skills = () => {
     },
   };
 
-  const mySkillsArray = [
-    { title: 'Php', imageUrl: Laravel },
-    { title: 'Laravel', imageUrl: Php },
-    { title: 'Html/CSS/JavaScript', imageUrl: WebDev },
-    { title: 'Unity', imageUrl: Unity },
-    { title: 'C#', imageUrl: C },
-  ]
+  const myObject = {
+    Core: [
+      { title: 'Html/CSS/JavaScript', imageUrl: images.WebDev },
+      { title: 'VueJS', imageUrl: images.vueJS },
+      { title: 'Php', imageUrl: images.Php },
+      { title: 'Laravel', imageUrl: images.Laravel },
+      { title: 'RestAPI', imageUrl: images.restAPI },
+      { title: 'GraphQL', imageUrl: images.graphQL },
+      { title: 'PostgreSQL', imageUrl: images.pgSQL },
+    ],
+    Knowledgeable: [
+      { title: 'React JS', imageUrl: images.reactJS },
+      { title: 'Ionic Framework', imageUrl: images.ionic },
+      { title: 'Unity', imageUrl: images.Unity },
+      { title: 'C#', imageUrl: images.C },
+    ]
+  }
   return (
     <section className="skill" id="skills">
       <Container>
         <Row>
           <Col>
             <div>
-              <h2>Skills</h2>
+              <h2 className="text-center">Skills</h2>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
+                I bring a diverse set of programming skills that enable me to develop innovative solutions for real-world challenges.
               </p>
-              
-              <IconModalButton btnTitle='Show my skills' modalTitle='List of Skills' mySkills={mySkillsArray}/>
+              <IconModalButton btnTitle='Show my skills' modalTitle='List of Skills' itemList={myObject}/>
             </div>
           </Col>
         </Row>

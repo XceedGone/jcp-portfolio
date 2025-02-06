@@ -72,13 +72,16 @@ export const Banner = () => {
             </h1>
             <p className="text-justify">
                 My dedication to learning new things is a significant advantage in my professional life. This allows me to work effectively and collaboratively, while 
-                also enhancing my skills and knowledge in the IT industry. 
-                Having just a year of experience as a developer is not a hindrance to 
-                accomplishing client requirements. Instead, it motivates me to produce high-quality results. 
+                also enhancing my skills and knowledge in the IT industry.
               </p>
-            <button>
-              Let's Connect! <ArrowRightCircle size={25} />
-            </button>
+            <a
+              href='https://www.linkedin.com/in/john-christopher-pesquera-948049230/'
+              target="_blank" rel="noopener noreferrer"
+              style={{ textDecoration: 'none' }}>
+              <button>
+                Let's Connect! <ArrowRightCircle size={25} />
+              </button>
+            </a>
           </Col>
           <Col xs={12} md={6} xl={5}>
             <div data-aos="fade-left">

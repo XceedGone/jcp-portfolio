@@ -20,13 +20,25 @@ function MyVerticallyCenteredModal(props) {
                 </Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>
                     { 
-                        props?.mySkills?.map(item => (
-                            <CardWithImage title={item.title} imgUrl={item.imageUrl} showDescription={item.showDescription} />
+                        Object.entries(props?.itemList)?.map(([category, items], categoryIndex) => (
+                            <div>
+                                <h3 className={categoryIndex === 0 ? '' : 'mt-4'}>{category}</h3>
+                                <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>
+                                    {items.map(item => (
+                                        <CardWithImage
+                                            title={item.title}
+                                            imgUrl={item.imageUrl}
+                                            showDescription={item.showDescription}
+                                            description={item.description}
+                                            siteUrl={item.siteUrl}
+                                            />
+                                    ))}
+                                </div>
+                            </div>
                         ))
                     }
-                </div>
+                {/* </div> */}
             </Modal.Body>
             <Modal.Footer>
                 <Button onClick={props.onHide}>Close</Button>
@@ -36,17 +48,22 @@ function MyVerticallyCenteredModal(props) {
 }
 export const IconModalButton = function (props) {
     const [modalShow, setModalShow] = React.useState(false);
-    const { mySkills } = props
+    const { itemList } = props
     return (
         <>
             <MyVerticallyCenteredModal
-                mySkills={mySkills}
+                itemList={itemList}
                 modalTitle={props.modalTitle}
                 show={modalShow}
                 onHide={() => setModalShow(false)}
             />
 
-            <button onClick={() => setModalShow(true)} type="button" className="btn btn-primary">{props.btnTitle}</button>
+            <div className="text-center">
+            <button onClick={() => setModalShow(true)} type="button" className="btn btn-primary mx-auto">
+                {props.btnTitle}
+            </button>
+            </div>
+            {/* <button onClick={() => setModalShow(true)} type="button" className="btn btn-primary text-center">{props.btnTitle}</button> */}
         </>
     );
 }

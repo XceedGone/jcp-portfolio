@@ -5,8 +5,8 @@ import { Container, Row, Col } from "react-bootstrap";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "react-multi-carousel/lib/styles.css";
-import Sample_1 from "../../../assets/img/project/sample-1.png";
 import { IconModalButton } from "../../../components/ComponentUtils";
+import { images } from "../../../utils/images";
 
 export const Project = () => {
   useEffect(() => {
@@ -33,23 +33,30 @@ export const Project = () => {
     },
   };
 
-  const myProjectsArray = [
-    { title: 'Sample 1', imageUrl: Sample_1, showDescription: true }
-  ]
+  const myObject = {
+    Simple: [
+      { title: 'Portfolio', imageUrl: images.portfolio, showDescription: true, description: 'This portfolio, built with ReactJS, showcases my skills and capabilities in the IT industry.', siteUrl: 'https://xceedgone.github.io/jcp-portfolio/' },
+      { title: 'Guess Game', imageUrl: images.placeholder, showDescription: true, description: 'Not yet available. Not yet available.' },
+    ],
+    Moderate: [
+      { title: 'Chocoholics', imageUrl: images.choco, showDescription: true, description: 'This was my first experience with REST API. It was built using the Ionic framework, with PHP and MySQL for the backend. Unfortunately, the page currently only displays static content.', siteUrl: 'https://sage-bavarois-7de00a.netlify.app' },
+      { title: 'CRM System', imageUrl: images.placeholder, showDescription: true, description: 'Not yet available. Not yet available.' }
+    ],
+    Complex: [
+      { title: 'Loop', imageUrl: images.placeholder, showDescription: true, description: 'This project was a collaborative effort with my capstone team. It’s a game designed to teach programming languages through the use of code blocks.' }
+    ]
+  }
   return (
     <section className="skill" id="projects">
       <Container>
         <Row>
           <Col>
             <div>
-              <h2>Project</h2>
+              <h2 className="text-center">Project</h2>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
+                Here’s a collection of my projects, showcasing my journey in programming. I’ve worked on everything from simple web pages to more complex websites or even a game!
               </p>
-              <IconModalButton btnTitle='Show my projects' modalTitle='List of Projects' mySkills={myProjectsArray}/>
+              <IconModalButton btnTitle='Show my projects' modalTitle='List of Projects' itemList={myObject}/>
             </div>
           </Col>
         </Row>
