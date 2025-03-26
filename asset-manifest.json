@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/jcp-portfolio/static/css/main.c4a674e5.css",
-    "main.js": "/jcp-portfolio/static/js/main.f62f7017.js",
+    "main.js": "/jcp-portfolio/static/js/main.5a94b4c9.js",
     "static/js/453.9f340039.chunk.js": "/jcp-portfolio/static/js/453.9f340039.chunk.js",
     "static/media/banner-bg.png": "/jcp-portfolio/static/media/banner-bg.4d12a82563a04eb6993d.png",
     "static/media/pgSQL.png": "/jcp-portfolio/static/media/pgSQL.a13ca8b735cd270e0a64.png",
     "static/media/chocoholics.png": "/jcp-portfolio/static/media/chocoholics.d6f76264d1634f9dad3c.png",
     "static/media/graphQL.png": "/jcp-portfolio/static/media/graphQL.d888a9f6435e32f2a1cf.png",
     "static/media/restAPI.png": "/jcp-portfolio/static/media/restAPI.8de73ee3ee10f8ad3afd.png",
-    "static/media/Pesquera_Resume.pdf": "/jcp-portfolio/static/media/Pesquera_Resume.58ab16041abb673e3a63.pdf",
+    "static/media/Pesquera_Resume.pdf": "/jcp-portfolio/static/media/Pesquera_Resume.f7e4bed526778fb0c0f6.pdf",
     "static/media/web-dev.png": "/jcp-portfolio/static/media/web-dev.15967bb7321627484d02.png",
     "static/media/CentraNo2-Bold.ttf": "/jcp-portfolio/static/media/CentraNo2-Bold.2faff7f7d3fc92a2fcd9.ttf",
     "static/media/CentraNo2-Medium.ttf": "/jcp-portfolio/static/media/CentraNo2-Medium.f94be5b326d78bb32b95.ttf",
@@ -24,11 +24,11 @@
     "static/media/revicons.woff": "/jcp-portfolio/static/media/revicons.e8746a624ed098489406.woff",
     "index.html": "/jcp-portfolio/index.html",
     "main.c4a674e5.css.map": "/jcp-portfolio/static/css/main.c4a674e5.css.map",
-    "main.f62f7017.js.map": "/jcp-portfolio/static/js/main.f62f7017.js.map",
+    "main.5a94b4c9.js.map": "/jcp-portfolio/static/js/main.5a94b4c9.js.map",
     "453.9f340039.chunk.js.map": "/jcp-portfolio/static/js/453.9f340039.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c4a674e5.css",
-    "static/js/main.f62f7017.js"
+    "static/js/main.5a94b4c9.js"
   ]
 }
